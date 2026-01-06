@@ -19,4 +19,5 @@ public class RouteEntity {
 
     @Column(name = "to_folder", nullable = false)
     private String toFolder;
+    private String routeType;
 }

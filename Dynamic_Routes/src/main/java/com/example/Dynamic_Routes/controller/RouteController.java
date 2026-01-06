@@ -17,22 +17,30 @@ public class RouteController {
     private final RouteService routeService;
 
     @PostMapping
-    public RouteEntity addRoute(@RequestBody RouteEntity route) {
+    public RouteEntity addRoute(@RequestBody RouteEntity route)
+
+    {
         return routeService.addRoute(route);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteRoute(@PathVariable Long id) {
+    public void deleteRoute(@PathVariable Long id)
+
+    {
         routeService.deleteRoute(id);
     }
 
     @GetMapping
-    public List<RouteEntity> getAllRoutes() {
+    public List<RouteEntity> getAllRoutes()
+
+    {
         return routeService.getAllRoutes();
     }
 
     @GetMapping("/refreshroutes")
-    public String refreshRoutes() throws Exception {
+    public String refreshRoutes() throws Exception
+
+    {
         return routeService.refreshRoutes();
     }
 }
